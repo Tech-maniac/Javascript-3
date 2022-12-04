@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body>
+        
+        <p id="para1">Paragraph 1</p>
+        
+        <p class="para">Paragraph 2</p>
+
+        <p> Normal para </p>
+
+        <h1 id="heading"> Heading 1 </h1>
+
+        <span id="spanID">CLICK THIS SPAN</span>
+
+        <button onclick="changeContent()">Click here</button>
+
+
+        <script>
+
+            let spanElement = document.getElementById('spanID');
+            
+            spanElement.onclick=function(){
+                alert("hello");
+            }
+
+            //event objects :
+            let paraID = document.querySelector('#para1');
+
+            checkEventDetails =()=>{
+                alert("Hello");
+                console.log(event);
+                console.log(event.type);
+                console.log(event.target);
+            }
+
+            paraID.addEventListener('click',checkEventDetails)
+
+            function changeContent()
+            {
+               // document.getElementById('heading').innerHTML = "THIS CHANGED";
+                //returns the first matching value
+                var xyz = document.querySelector('.para').innerHTML;
+                console.log(document.getElementsByTagName('p'));
+            }
+
+        </script>
+    </body>
+</html>
